@@ -60,6 +60,10 @@ body {
   }
 */
 
+section {
+  margin-bottom: 100px;
+}
+
 hr {
     background-color: #fff;
     box-shadow:
