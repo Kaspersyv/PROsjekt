@@ -1,6 +1,6 @@
 body {
-    background: #000;
     font-family: 'Poppins', sans-serif;
+    background: black !important; /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 }
 
 .glow {
