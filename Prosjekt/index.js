@@ -1,5 +1,5 @@
 console.log("hei");
 
-for (i = 0; i < 100000; i++) {
+for (i = 1; i > 0; i++) {
     console.log(i);
 }
