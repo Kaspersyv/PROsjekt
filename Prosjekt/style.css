@@ -5,6 +5,32 @@ body {
 
 .glow {
     font-size: 80px;
+    text-align: center;
+}
+
+.facth1 {
+    color: white;
+    animation: facth1 1s ease-in-out infinite alternate;
+}
+
+.hubh1 {
+    color: black;
+    background-color: #ffa31a;
+}
+
+@keyframes facth1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffa31a, 0 0 40px #ffa31a, 0 0 50px #ffa31a, 0 0 60px #ffa31a, 0 0 70px #ffa31a;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ffc548, 0 0 40px #ffc548, 0 0 50px #ffc548, 0 0 60px #ffc548, 0 0 70px #ffc548, 0 0 80px #ffc548;
+    }
+  }
+
+/*
+.glow {
+    font-size: 80px;
     color: #fff;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
@@ -19,13 +45,14 @@ body {
       text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
   }
-
+*/
 
 hr {
     background-color: #fff;
     box-shadow:
       0 0 20px 20px #ff4da6, /* middle magenta */
-      0 0 20px 20px #0ff /* outer cyan */
+      0 0 20px 20px #0ff /* outer cyan */;
+    height: 4px;
 }
 
 
