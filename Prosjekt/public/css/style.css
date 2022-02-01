@@ -3,6 +3,10 @@ body {
     background: black !important; /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 }
 
+.nav-link {
+  font-size: 20px;
+}
+
 .glow {
     font-size: 80px;
     text-align: center;
