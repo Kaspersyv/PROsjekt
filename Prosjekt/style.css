@@ -1,7 +1,84 @@
 body {
     background: #000;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-    color: white;
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+
+hr {
+    background-color: #fff;
+    box-shadow:
+      0 0 20px 20px #ff4da6, /* middle magenta */
+      0 0 20px 20px #0ff /* outer cyan */
+}
+
+
+
+footer {
+    /* background-color: #fcb9aa;  */
+    color: #fff;
+    text-align: center;
+    margin-top: 35%;
+    padding-bottom: 5%;
+    font-size: 1.25rem;
+}
+
+.footer-text {
+    padding-top: 3%;
+}
+
+
+.Portrettfoto {
+    transition: transform .2s;
+}
+
+
+.Portrettfoto:hover {
+transform: scale(1.5);
+}
+
+.Potrettfoto-Ram {
+    cursor: pointer;
+    border-radius: 100%;
+    height: 70px;
+    margin-right: 2%;
+}
+
+.Potrettfoto-Kasper {
+    cursor: pointer;
+    border-radius: 100%;
+    height: 70px;
+}
+
+
+.Potrettfoto-Tor {
+    border-radius: 100%;
+    margin-left: 2%;
+    height: 70px;
+} 
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: blue;
+    transition: 0.5s;
 }
