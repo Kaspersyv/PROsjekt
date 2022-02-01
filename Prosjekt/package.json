@@ -1,0 +1,23 @@
+{
+  "name": "prosjekt",
+  "version": "1.0.0",
+  "description": "Prosjekt i YFF/Programmering 😃",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaspersyv/PROsjekt.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kaspersyv/PROsjekt/issues"
+  },
+  "homepage": "https://github.com/Kaspersyv/PROsjekt#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}
