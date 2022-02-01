@@ -1,11 +1,11 @@
 # PROsjekt
-Prosjekt i YFF/Programmering
+Prosjekt i YFF/Programmering 😃
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Link til nettsiden: https://kaspersyv.github.io/PROsjekt/
+Link til nettsiden: https://kaspersyv.github.io/PROsjekt/ 🐻
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Takk for at du leste!
+Takk for at du leste! ❤️
