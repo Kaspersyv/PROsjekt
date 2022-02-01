@@ -13,6 +13,8 @@ app.get("/", function (req, res) {
 
 })
 
+app.use(express.static(__dirname + '/public'));
+
 app.post("/", function (req, res) {
 
     const weatherQuery = req.body.cityName
