@@ -28,6 +28,11 @@ body {
     }
   }
 
+
+  .form-text {
+      color: #fff;
+  }
+
 /*
 .glow {
     font-size: 80px;
