@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 
 app.use(express.static(__dirname + '/public'));
 
-app.post("/", function (req, res) {
+app.post("/weather", function (req, res) {
 
     const weatherQuery = req.body.cityName
     const weatherKey = "3a709e1761387a6a1e9fc503e5ec7188"
@@ -44,6 +44,34 @@ app.post("/", function (req, res) {
         })
     })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
