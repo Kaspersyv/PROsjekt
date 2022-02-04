@@ -40,6 +40,28 @@ app.post("/weather", function (req, res) {
 
             res.send()
 
+        })
+    })
+})
+
+
+
+app.post("/fact", function (req, res) {
+    const factLanguage = "en"
+    const factURL = "https://uselessfacts.jsph.pl/random.json?language=" + factLanguage
+    
+
+    https.get(factURL, function (response) {
+        console.log(response.statusCode)
+
+        response.on("data", function (data) {
+            const factData = JSON.parse(data);
+            const factText = factData.text
+
+
+            res.write("<p>Here is the random fact!:</p>" +  "<br>" + factText);
+
+            res.send()
 
         })
     })
@@ -51,10 +73,15 @@ app.post("/weather", function (req, res) {
 
 
 
+/*
+app.post("/fact", function(req, res) {
 
-
-
-
+  
+    https.get(factURL, function (response) {
+        console.log(response.statusCode)
+    })
+})
+*/
 
 
 
