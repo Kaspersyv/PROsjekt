@@ -60,6 +60,7 @@ app.post("/fact", function (req, res) {
 
 
             res.write("<p>Here is the random fact!:</p>" +  "<br>" + factText);
+            
 
             res.send()
 
