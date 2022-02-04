@@ -114,7 +114,6 @@ app.post("/fact", function (req, res) {
 
             res.write("<h1>Here is the random fact!:</h1>" +  "<br>" + factText);
             res.write("<style>body {background-color: #FF968A; color: #fff;} h1 {text-shadow: 2px 2px #ed5442;} </style>");
-            
 
             res.send()
 
