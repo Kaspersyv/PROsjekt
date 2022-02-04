@@ -128,36 +128,6 @@ app.post("/fact", function (req, res) {
 
 
 
-/*
-app.post("/fact", function(req, res) {
-
-  
-    https.get(factURL, function (response) {
-        console.log(response.statusCode)
-    })
-})
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(3000, function () {
     console.log("Server started on port 3000");
