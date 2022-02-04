@@ -38,9 +38,9 @@ app.post("/weather", function (req, res) {
             res.write("<h1>The temperature in " + weatherQuery + " is " + weatherTemp + " degrees celsius</h1>");
             res.write("<img src=" + weatherImageURL + ">");
 
-            res.write('<p class="weatherP">The weather is currently overcast clouds</p>' +
-                '<h1 class="weatherH1">The temperature in Asker is 3.07 degrees celsius</h1>' +
-                '<img class="weatherImg" src="https://openweathermap.org/img/wn/04d@2x.png">' +
+            res.write('<p class="weatherP">The weather is currently ' + weatherDescription + '</p>' +
+                '<h1 class="weatherH1">The temperature in ' + weatherQuery + ' is ' + weatherTemp + ' degrees celsius</h1>' +
+                '<img class="weatherImg" src=' + weatherImageURL + '>' +
                 '<div class="scene">' +
                     '<div class="cube rotate-90-vertical-fwd">' +
                         '<div class="cube__face cube__face--front"></div>' +
@@ -59,87 +59,40 @@ app.post("/weather", function (req, res) {
                     '.weatherImg {display: block; margin: auto; background-color: #FFC5BF; border-radius: 20px; box-shadow: 6px 6px 6px #ed5442;}' +
 
                     'body {background-color: #FF968A;}' +
-                    /*
-                    .scene {
-                        width: 200px;
-                        height: 200px;
-                        margin-top: 100px;
-                        margin-left: auto;
-                        margin-right: auto;
-                        perspective: 400px;
-                        text-align: center;
-                    }
                     
-                    .cube {
-                        width: 200px;
-                        height: 200px;
-                        position: relative;
-                        transform-style: preserve-3d;
-                        transform: translateZ(-100px);
-                        transition: transform 2s;
-                    }
+                    '.scene {width: 200px; height: 200px; margin-top: 100px; margin-left: auto; margin-right: auto; perspective: 400px; text-align: center;}' +
                     
-                    .cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
-                    .cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
-                    .cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
-                    .cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
-                    .cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
-                    .cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+                    '.cube {width: 200px; height: 200px; position: relative; transform-style: preserve-3d; transform: translateZ(-100px); transition: transform 2s;}' +
                     
-                    .cube__face {
-                        position: absolute;
-                        width: 200px;
-                        height: 200px;
-                        border: 2px solid black;
-                        line-height: 200px;
-                        font-size: 40px;
-                        font-weight: bold;
-                        color: white;
-                        text-align: center;
-                    }
+                    '.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }' +
+                    '.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }' +
+                    '.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }' +
+                    '.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }' +
+                    '.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }' +
+                    '.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }' +
                     
-                    .cube__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
-                    .cube__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
-                    .cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }
-                    .cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }
-                    .cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }
-                    .cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
+                    '.cube__face {position: absolute; width: 200px; height: 200px; border: 2px solid black; line-height: 200px; font-size: 40px; font-weight: bold; color: white; text-align: center;}' +
                     
-                    .cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
-                    .cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
-                    .cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
-                    .cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
-                    .cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
-                    .cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+                    '.cube__face--front  { background: hsla(  0, 100%, 50%, 0.7); }' +
+                    '.cube__face--right  { background: hsla( 60, 100%, 50%, 0.7); }' +
+                    '.cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }' +
+                    '.cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }' +
+                    '.cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }' +
+                    '.cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }' +
                     
-                    label { margin-right: 10px; }
+                    '.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }' +
+                    '.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }' +
+                    '.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }' +
+                    '.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }' +
+                    '.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }' +
+                    '.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }' +
                     
-                    .rotate-90-vertical-fwd {
-                        -webkit-animation: rotate-90-vertical-fwd 2s linear infinite both;
-                                animation: rotate-90-vertical-fwd 2s linear infinite both;
-                    }
+                    'label { margin-right: 10px; }' +
                     
-                    @-webkit-keyframes rotate-90-vertical-fwd {
-                    0% {
-                        -webkit-transform: rotateY(0);
-                                transform: rotateY(0);
-                    }
-                    100% {
-                        -webkit-transform: rotateY(360deg);
-                                transform: rotateY(360deg);
-                    }
-                    }
-                    @keyframes rotate-90-vertical-fwd {
-                    0% {
-                        -webkit-transform: rotateY(0);
-                                transform: rotateY(0);
-                    }
-                    100% {
-                        -webkit-transform: rotateY(360deg);
-                                transform: rotateY(360deg);
-                    }
-                    }
-                    */
+                    '.rotate-90-vertical-fwd {-webkit-animation: rotate-90-vertical-fwd 2s linear infinite both; animation: rotate-90-vertical-fwd 2s linear infinite both;}' +
+                    
+                    '@-webkit-keyframes rotate-90-vertical-fwd {0% {-webkit-transform: rotateY(0); transform: rotateY(0);}100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg);}}' +
+                    '@keyframes rotate-90-vertical-fwd {0% {-webkit-transform: rotateY(0); transform: rotateY(0);}100% {-webkit-transform: rotateY(360deg); transform: rotateY(360deg);}}' +
                 '</style>');
 
             res.send()
