@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background: black !important; /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 }
 
@@ -41,6 +41,23 @@ body {
       color: #fff;
   }
 
+  .butn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 7px;
+    font-family: Arial;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 20px;
+    background: #FFA500;
+    padding: 0px 15px 0px 15px;
+    text-decoration: none;
+  }
+
+  .butn:hover {
+    background: #000000;
+    text-decoration: none;
+  }
 /*
 .glow {
     font-size: 80px;
