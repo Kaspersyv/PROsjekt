@@ -124,6 +124,7 @@ transform: scale(1.5);
 }
 
 .footer-link:hover {
-    color: blue;
+    color: black;
+    background: orange;
     transition: 0.5s;
 }
