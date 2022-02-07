@@ -121,6 +121,32 @@ app.post("/fact", function (req, res) {
     })
 })
 
+app.post("/recipe", function (req, res) {
+
+    const recipeQuery = req.body.recipeInput
+    const recipeKey = "aa698e998c6c474491e1cb0b80fb419d"
+
+    const recipeURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + recipeQuery + "&apiKey=" + recipeKey
+
+    https.get(recipeURL, function (response) {
+        console.log(response.statusCode)
+
+        response.on("data", function (data) {
+            const recipeData = JSON.parse(data);
+            console.log(recipeData.results[0].title)
+
+            
+
+            res.write('<p>' + recipeData.results[0].title + "</p>")
+            res.write('<p>' + recipeData.results[1].title + "</p>")
+            res.write('<p>' + recipeData.results[2].title + "</p>")
+
+            res.send()
+
+        })
+    })
+})
+
 
 
 
