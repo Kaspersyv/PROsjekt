@@ -4,6 +4,7 @@ const bodyParser = require("body-parser")
 
 const app = express();
 
+
 app.use(bodyParser.urlencoded({
     extended: true
 }))
@@ -111,12 +112,16 @@ app.post("/fact", function (req, res) {
             const factData = JSON.parse(data);
             const factText = factData.text
 
-
+            
             res.write("<h1>Here is the random fact!:</h1>" +  "<br>" + factText);
             res.write("<style>body {background-color: #FF968A; color: #fff;} h1 {text-shadow: 2px 2px #ed5442;} </style>");
+            res.write('<button id=' + '"refreshbtn">')
 
+            
+            
+            
             res.send()
-
+            
         })
     })
 })
@@ -128,6 +133,9 @@ app.post("/recipe", function (req, res) {
 
     const recipeURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + recipeQuery + "&apiKey=" + recipeKey
 
+    
+
+
     https.get(recipeURL, function (response) {
         console.log(response.statusCode)
 
@@ -137,9 +145,8 @@ app.post("/recipe", function (req, res) {
 
             
 
-            res.write('<p>' + recipeData.results[0].title + "</p>")
-            res.write('<p>' + recipeData.results[1].title + "</p>")
-            res.write('<p>' + recipeData.results[2].title + "</p>")
+            
+           
 
             res.send()
 
