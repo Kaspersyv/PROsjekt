@@ -50,9 +50,12 @@
   </nav>
     <h1 class="glow"><span class="facth1">Fact</span><span class="hubh1">Hub</span></h1>
 
+    <!-- Weather section -->
+
     <section id="weather" class="text-white">
       <h1>Weather</h1>
 
+      <!-- Redirect to /weather -->
       <form action="/weather" method="post">
         <label for="cityInput" class="text-white">City Name: </label>
         <input type="text" name="cityName" id="cityInput">
@@ -62,10 +65,12 @@
       </form>
     </section>
         
-    
+    <!-- Rancom Facts section  -->
 
     <section id="randomFacts" class="text-white">
       <h1>Random Facts</h1>
+
+      <!-- Redirect to /fact on localhost -->
       <form action="/fact" method="post">
         <button type="submit" class="butn">Go</button>
         <p>When you click the go button you will be redirected to a website, with a random fact.</p>
@@ -75,7 +80,12 @@
 
 
     <section id="countryTimeCheck" class="text-white">
-      <h1>Country Clock <i class="far fa-clock"></i></h1> 
+      <h1>FoodHub <i class="fas fa-book-dead"></i></h1> 
+      <form action="/recipe" method="post">
+        <label for="recipeInput" class="text-white">Ingredient: </label>
+        <input type="text" name="cityName" id="recipeInput">
+        <button type="submit" class="butn">Go</button>
+      </form>
       
     </section>
 
