@@ -168,6 +168,7 @@ app.post("/fact", function (req, res) {
       res.write("<br><br><br><button onclick='window.location.reload();'class='butn'>FactHub</button>");
 
       res.write(
+          '<header><meta charset="UTF-8"></header>' +
         '<style> @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); \
            body {background-color: #FF968A; color: #fff; text-align: center; font-size: 32px; font-family: "Poppins", sans-serif;} \
            h1 {text-shadow: 2px 2px #ed5442;} \
