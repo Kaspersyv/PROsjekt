@@ -41,6 +41,8 @@ app.post("/weather", function (req, res) {
         "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
 
       res.write(
+
+        '<header><meta charset="UTF-8"></header>' +
         '<p class="weatherP">The weather is currently ' + weatherDescription + '<p>' +
         '<h1 class="weatherH1">The temperature in ' + weatherQuery + ' is ' + weatherTemp + ' degrees celsius</h1>' +
         '<div class="scene">' +
