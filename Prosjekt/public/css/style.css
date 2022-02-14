@@ -89,8 +89,8 @@ section {
 hr {
     background-color: #fff;
     box-shadow:
-      0 0 20px 20px #ff4da6, /* middle magenta */
-      0 0 20px 20px #0ff /* outer cyan */;
+      20px 20px 40px 40px #ff4da6, /* middle magenta */
+      40px 20px 40px 40px purple /* outer cyan */;
     height: 4px;
 }
 
