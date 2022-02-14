@@ -116,16 +116,19 @@ app.post("/fact", function (req, res) {
       res.write(
         "<h1 class='title'>Here is the random fact!:</h1>" + "<br>" + factText
       );
+
+      res.write("<br><br><br><button onclick='window.location.reload();'class='butn'>FactHub</button>");
+
       res.write(
         '<style> @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); \
            body {background-color: #FF968A; color: #fff; text-align: center; font-size: 32px; font-family: "Poppins", sans-serif;} \
            h1 {text-shadow: 2px 2px #ed5442;} \
           .title {background: #000;} \
-          .butn{background: orange; border-radius: 7px; padding: 10px 20px 10px 20px; color: #fff; } \
+          .butn{background: black; border-radius: 7px; padding: 10px 20px 10px 20px; color: #fff; text-shadow: 1px 1px #ed5442; } \
           </style>'
       );
 
-      res.write("<br><br><br><button onclick='btnFunction()'class='butn'>FactHub</button>");
+      
 
       res.send();
     });
@@ -136,7 +139,5 @@ app.listen(3000, function () {
   console.log("Server started on port 3000");
 });
 
-function btnFunction() {
-    location.reload();
-}
+
 
