@@ -17,6 +17,10 @@ body {
     text-align: center;
 }
 
+#main-title:hover {
+  cursor: pointer;
+}
+
 .facth1 {
     color: white;
     animation: facth1 1s ease-in-out infinite alternate;

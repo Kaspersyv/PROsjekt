@@ -46,12 +46,14 @@
         </li>
     </div>
   </nav>
-    <h1 class="glow"><span class="facth1">Fact</span><span class="hubh1">Hub</span></h1>
+    <h1 class="glow"><span onclick="window.location.reload();" class="facth1" id="main-title">Fact</span><span onclick="window.location.reload();" class="hubh1" id="main-title">Hub</span></h1>
 
     <!-- Weather section -->
 
     <section id="weather" class="text-white">
-      <h1><span>Weather</span><span class="hubh1">Hub</span> <i class="fas fa-cloud"></i> </h1>
+     <h1><span>Weather</span><span class="hubh1">Hub</span> 
+        
+        <i class="fas fa-cloud"></i> </h1>
 
       <!-- Redirect to /weather -->
       <form action="/weather" method="post">
