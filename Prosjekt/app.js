@@ -41,6 +41,50 @@ app.post("/weather", function (req, res) {
         "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
 
       res.write(
+        '<p class="weatherP">The weather is currently ' + weatherDescription + '<p>' +
+        '<h1 class="weatherH1">The temperature in ' + weatherQuery + ' is ' + weatherTemp + ' degrees celsius</h1>' +
+        '<div class="scene">' +
+          '<div class="cube rotate-90-vertical-fwd">' +
+            '<div class="cube__face cube__face--front"><h1 class="weatherH1">' + weatherTemp + '°</h1></div>' +
+            '<div class="cube__face cube__face--back"><h1 class="weatherH1">' + weatherTemp + '°</h1></div>' +
+            '<div class="cube__face cube__face--right"><img src=' + weatherImageURL + '></div>' +
+            '<div class="cube__face cube__face--left"><img src=' + weatherImageURL + '></div>' +
+            '<div class="cube__face cube__face--top"></div>' +
+            '<div class="cube__face cube__face--bottom"></div>' +
+          '</div>' +
+        '</div>' +
+        '<style>' +
+          '@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");' +
+          '.weatherP {margin-top: 6%; font-family: "Poppins", sans-serif; font-size: 1.5rem; color: white; text-align: center; text-shadow: 6px 6px 6px #ed5442;}' +
+          '.weatherH1 {font-family: "Poppins", sans-serif; font-size: 2.2rem; color: white; text-align: center; text-shadow: 6px 6px 6px #ed5442;}' +
+          'body {font-family: sans-serif; background-image: url("https://www.10wallpaper.com/wallpaper/2560x1600/1710/Sunset_Mountains_Calm_High_Quality_Wallpaper_2560x1600.jpg"); background-size: cover; height: 100%; overflow: hidden;}' +
+          '.scene {width: 100px; height: 100px; margin-top: 50px; margin-left: auto; margin-right: auto; perspective: 300px; text-align: center;}' +
+          '.cube {width: 100px; height: 100px; position: relative; transform-style: preserve-3d; transform: translateZ(-100px); transition: transform 4s;}' +
+          '.cube.show-front  { transform: translateZ(-50px) rotateY(   0deg); }' +
+          '.cube.show-right  { transform: translateZ(-50px) rotateY( -90deg); }' +
+          '.cube.show-back   { transform: translateZ(-50px) rotateY(-180deg); }' +
+          '.cube.show-left   { transform: translateZ(-50px) rotateY(  90deg); }' +
+          '.cube.show-top    { transform: translateZ(-50px) rotateX( -90deg); }' +
+          '.cube.show-bottom { transform: translateZ(-50px) rotateX(  90deg); }' +
+          '.cube__face {position: absolute; width: 100px; height: 100px; border: 2px solid black; line-height: 3.4rem; font-size: 2.6rem; font-weight: bold; color: white; text-align: center;}' +
+          '.cube__face--front  { background: #FFC5BF; }' +
+          '.cube__face--right  { background: #FFC5BF; }' +
+          '.cube__face--back   { background: #FFC5BF; }' +
+          '.cube__face--left   { background: #FFC5BF; }' +
+          '.cube__face--top    { background: #FFC5BF; }' +
+          '.cube__face--bottom { background: #FFC5BF; }' +
+          '.cube__face--front  { transform: rotateY(  0deg) translateZ(50px); }' +
+          '.cube__face--right  { transform: rotateY( 90deg) translateZ(50px); }' +
+          '.cube__face--back   { transform: rotateY(180deg) translateZ(50px); }' +
+          '.cube__face--left   { transform: rotateY(-90deg) translateZ(50px); }' +
+          '.cube__face--top    { transform: rotateX( 90deg) translateZ(50px); }' +
+          '.cube__face--bottom { transform: rotateX(-90deg) translateZ(50px); }' +
+          'label { margin-right: 10px; }' +
+          '.rotate-90-vertical-fwd { -webkit-animation: rotate-90-vertical-fwd 4s linear infinite both; animation: rotate-90-vertical-fwd 4s linear infinite both;}' +
+          '@-webkit-keyframes rotate-90-vertical-fwd { 0% { -webkit-transform: rotateY(0); transform: rotateY(0); } 100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); } }' +
+          '@keyframes rotate-90-vertical-fwd { 0% { -webkit-transform: rotateY(0); transform: rotateY(0); } 100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); } }' +
+        '</style>'
+/*
         '<p class="weatherP">The weather is currently ' +
           weatherDescription +
           "</p>" +
@@ -94,6 +138,8 @@ app.post("/weather", function (req, res) {
           "@-webkit-keyframes rotate-90-vertical-fwd {0% {-webkit-transform: rotateY(0); transform: rotateY(0);}100% {-webkit-transform: rotateY(360deg);transform: rotateY(360deg);}}" +
           "@keyframes rotate-90-vertical-fwd {0% {-webkit-transform: rotateY(0); transform: rotateY(0);}100% {-webkit-transform: rotateY(360deg); transform: rotateY(360deg);}}" +
           "</style>"
+*/
+
       );
 
       res.send();
