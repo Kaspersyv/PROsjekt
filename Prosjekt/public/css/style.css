@@ -7,6 +7,10 @@ body {
   font-size: 20px;
 }
 
+.far, .fas {
+  color: #fc930a
+}
+
 .title {
   font-size: 40px;
   display:inline-block;
@@ -91,11 +95,11 @@ section {
   margin-bottom: 100px;
 }
 
-hr {
+.glowie {
     background-color: #fff;
     box-shadow:
-      20px 20px 40px 40px #ff4da6, /* middle magenta */
-      40px 20px 40px 40px purple /* outer cyan */;
+      10px 0px 35px 25px #fc930a, /* middle pink */
+      10px 0px 35px 5px #f8fc0a /* outer purple */;
     height: 4px;
 }
 
