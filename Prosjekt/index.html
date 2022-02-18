@@ -47,38 +47,92 @@
     </div>
   </nav>
     <h1 class="glow"><span onclick="window.location.reload();" class="facth1" id="main-title">Fact</span><span onclick="window.location.reload();" class="hubh1" id="main-title">Hub</span></h1>
+    <div class="container">
+    <div class="row">
+  
+      <!-- Weather section -->
 
-    <!-- Weather section -->
+      <section id="weather" class="text-white"> <section id="randomFacts" class="text-white"> 
 
-    <section id="weather" class="text-white">
-     <h1><span>Weather</span><span class="hubh1">Hub</span> 
-        
-        <i class="fas fa-cloud"></i> </h1>
+<section class="card-group">
+  <div class="card" style="background: rgb(41, 38, 38); color: #fff;">
+    <div class="card-body">
+      <h1 card-title style="text-align: center; margin-bottom: 5%;" ><span>Random</span><span class="hubh1">Hub</span> <i class="far fa-lightbulb"></i></h1>
+      <form action="/fact" method="post">
+        <button type="submit" class="butn">Go</button>
+        <p class="card-text">When you click the go button you will be redirected to a website with interesting facts. When you click the FactHub button, a new random fact will show up. </p>
+      </form>
+    </div>
+  </div>
 
-      <!-- Redirect to /weather -->
+<!-- Rancom Facts section  -->
+
+
+
+  <div class="card" style="background: rgb(41, 38, 38); color: #fff;">
+    <div class="card-body">
+      <h1 card-title style="text-align: center; margin-bottom: 5%;"><span>Weather</span><span class="hubh1">Hub</span> <i class="fas fa-cloud"></i></h1> 
       <form action="/weather" method="post">
         <label for="cityInput" class="text-white">City Name: </label>
         <input type="text" name="cityName" id="cityInput">
         <button type="submit" class="butn">Go</button>
-        <p>Type a country, or a city name in the input field and press go.<br> 
-          then you will get redirected to a webiste, where you can see the current weather.<p>
-      </form>
-    </section>
-        
-    <!-- Rancom Facts section  -->
+      <p class="card-text">Type a country, or a city name in the input field and press go. 
+        Then you will get redirected to a webiste, where you can see the current weather.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+</section>
 
-    <section id="randomFacts" class="text-white">
-      <h1><span>Random</span><span class="hubh1">Hub</span> <i class="far fa-lightbulb"></i> </h1>
-      
 
-      <!-- Redirect to /fact on localhost -->
-      <form action="/fact" method="post">
+
+
+
+
+<!-- Weather section -->
+
+<!-- <section id="weather" class="text-white">
+
+  <div class="col-sm-6"> 
+  <div class="card-group">
+  <div class="card" style="background: rgb(41, 38, 38); color: #fff;">
+    <div class="h-75">
+    <div class="card-body">
+      <h1 card-title><span>Weather</span><span class="hubh1">Hub</span> <i class="fas fa-cloud"></i></h1> 
+      <form action="/weather" method="post">
+        <label for="cityInput" class="text-white">City Name: </label>
+        <input type="text" name="cityName" id="cityInput">
         <button type="submit" class="butn">Go</button>
-        <p>When you click the go button you will be redirected to a website, with a random fact.</p>
-      </form>
-    </section>
+      <p class="card-text">Type a country, or a city name in the input field and press go. 
+        then you will get redirected to a webiste, where you can see the current weather.</p>
+    </div>
+  </div>
+  </div>
+</div>
+</form>
+</section> -->
+ 
+  <!-- Rancom Facts section  -->
 
+  <!-- <section id="randomFacts" class="text-white">
 
+  <div class="col-sm-6">
+  <div class="h-75">
+  <div class="card" style="background: rgb(41, 38, 38); color: #fff;">
+    <div class="card-body">
+      <h1 card-title><span>Random</span><span class="hubh1">Hub</span> <i class="far fa-lightbulb"></i></h1> -->
+      <!-- Redirect to /fact on localhost -->
+    <!-- <form action="/fact" method="post">
+      <button type="submit" class="butn">Go</button>
+      <p>When you click the go button you will be redirected to a website, with a random fact.</p>
+    </form>
+  </section>
+    </div>
+  </div>
+</div>
+</div> -->
 
     <footer>
         <!-- <p class="hr glow">----------------------------</p> -->

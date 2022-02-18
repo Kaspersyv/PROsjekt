@@ -25,6 +25,26 @@ body {
   cursor: pointer;
 }
 
+.card {
+  margin: 2rem;
+}
+
+form {
+  text-align: center;
+}
+
+label, .butn {
+  margin-bottom: 4%;
+}
+
+.form-text {
+  color: #fff;
+}
+
+.card-text {
+  text-align: center;
+}
+
 .facth1 {
     color: white;
     animation: facth1 1s ease-in-out infinite alternate;
@@ -46,9 +66,6 @@ body {
   }
 
 
-  .form-text {
-      color: #fff;
-  }
 
   .butn {
     -webkit-border-radius: 28;
@@ -62,6 +79,7 @@ body {
     padding: 0px 15px 0px 15px;
     text-decoration: none;
   }
+
 
   .butn:hover {
     background: #000000;
